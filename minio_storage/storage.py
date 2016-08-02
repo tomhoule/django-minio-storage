@@ -45,7 +45,7 @@ class MinioStorage(Storage):
         super(MinioStorage, self).__init__()
 
     def _sanitize_path(self, name):
-        return name.lstrip("./")
+        return name.lstrip(u"./")
 
     def _examine_file(self, name, content):
         """
